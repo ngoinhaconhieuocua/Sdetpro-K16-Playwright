@@ -1,0 +1,15 @@
+const readline = require('readline-sync');
+
+let arrivalTime = 7;
+let isHeOntime = (arrivalTime == 7);
+
+//!boolean ==> dao nguoc gia tri luan ly
+
+if (isHeOntime) {
+    console.log("Lets talk");
+} else {
+    console.log("Write a letter");
+}
+// Toan tu 3 ngoi
+let msg = isHeOntime ? "Let talk" : "Write a letter";
+console.log(msg);

@@ -1,0 +1,41 @@
+let myVar = 3;
+
+//camelcase
+//snake case
+//Pascalcase
+let PI_NUMBER = 3.14;
+
+let myNumber1 = 1;
+let myNumber2 = 2;
+
+// Right operand and left operand
+
+let result = myNumber1 + myNumber2;
+
+console.log("Total result :" + result, 1);
+
+// String template/literal
+console.log(`Total result ${result + 1}`);
+
+// Forward slash
+result = 5 / 2;
+console.log(`Ket qua cua 5 chia 2: ${result}`);
+console.log(`Ket qua cua 4/2: ${4 / 2}`);
+console.log(`Ket qua cua 10/3: ${10 / 3}`);
+
+
+//Rounding
+
+let roundingNearest =Math.round(10/3);
+console.log(`Ket qua cua roundingNearest: ${roundingNearest}`);
+
+
+result=10/3;
+let toFixNumber=result.toFixed(3);
+console.log(`Ket qua cua toFixNumber: ${toFixNumber}`);
+
+
+//Phep nhan
+
+let multi=4**2;
+console.log(`Ket qua 3*2: ${multi}`);
