@@ -17,10 +17,19 @@ async function main() {
         const data = await PostCtrl.getAllPost(baseUrl,userId);
          console.log("---------------------Target Post-----------");
         const targetPost = await PostCtrl.getTargetpost(postid, data);
-        console.log("Target post id: " + targetPost._id);
-        console.log("Target post title: " + targetPost._title);
-        console.log("Target post body: " + targetPost.body);
+        if (targetPost !== undefined && targetPost !== null)
+        {
+            console.log("Target post id: " + targetPost._id);
+            console.log("Target post title: " + targetPost._title);
+            console.log("Target post body: " + targetPost.body);
+        }
+        else
+        {
+            console.log("Post id không tồn tại");
+        }
+       
     }
+
     else {
         console.log("User khong ton tai");
     }
