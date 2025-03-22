@@ -1,0 +1,5 @@
+1.hàm getSalary đang được thiết kế ở lớp cha employee.
+lớp con ContractEmployee và FTEEMployee nên dùng lại hay viết đè ?
+thiết kế hiện tại đang dùng lại.
+2.Với bài toán này Employee có lên thiết kế là abstractClass không?
+với thiết kế hiện tại thì không.

@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var FTEEmployee_1 = require("./FTEEmployee");
+var ContractEmployee_1 = require("./ContractEmployee");
+var EmployeeController_1 = require("./EmployeeController");
+var Hoa = new FTEEmployee_1.default("Hoa");
+var Huyen = new FTEEmployee_1.default("Huyen");
+var Thao = new ContractEmployee_1.default("Thao");
+var employeeCtroller = new EmployeeController_1.default();
+var total = employeeCtroller.getTotalSalary([Hoa, Thao, Huyen]);
+console.log("Tong luong la: " + total);
+var theBestemployee = employeeCtroller.getBestSalary([Hoa, Huyen, Thao]);
+console.log("Nhan vien co luong cao nhat la: " + theBestemployee.getName());
+var theLowestEm = employeeCtroller.getLowestsalary([Hoa, Huyen, Thao]);
+console.log("Nhan vien co luong thap nhat la: " + theLowestEm.getName());
