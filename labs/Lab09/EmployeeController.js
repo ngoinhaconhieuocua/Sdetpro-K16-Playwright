@@ -11,7 +11,6 @@ var EmployeeController = /** @class */ (function () {
         return totalSalary;
     };
     EmployeeController.prototype.getBestSalary = function (employeeList) {
-        this.PrintEmployeeList(employeeList);
         var theBestEmployee = employeeList[0];
         employeeList.forEach(function (employee) {
             if (theBestEmployee.getSalary() < employee.getSalary())
@@ -20,7 +19,6 @@ var EmployeeController = /** @class */ (function () {
         return theBestEmployee;
     };
     EmployeeController.prototype.getLowestsalary = function (employeeList) {
-        this.PrintEmployeeList(employeeList);
         var lowestSalaryEmployee = employeeList[0];
         employeeList.forEach(function (employee) {
             if (lowestSalaryEmployee.getSalary() > employee.getSalary())
@@ -29,10 +27,20 @@ var EmployeeController = /** @class */ (function () {
         return lowestSalaryEmployee;
     };
     EmployeeController.prototype.PrintEmployeeList = function (employeeList) {
-        console.log("----------------DS nhan vien ---------------");
+        // console.log("----------------DS nhan vien ---------------");
         employeeList.forEach(function (emp) {
             console.log(emp.getName() + " with salary:" + emp.getSalary());
         });
+    };
+    EmployeeController.prototype.SortbyASC = function (employeList) {
+        employeList.sort(function (emp, emp2) { return emp.getSalary() - emp2.getSalary(); });
+        console.log("Sắp xếp theo thự tự tăng dần ");
+        this.PrintEmployeeList(employeList);
+    };
+    EmployeeController.prototype.SortbyDSC = function (employeList) {
+        employeList.sort(function (emp, emp2) { return emp2.getSalary() - emp.getSalary(); });
+        console.log("Sắp xếp theo thự tự giảm dần ");
+        this.PrintEmployeeList(employeList);
     };
     return EmployeeController;
 }());

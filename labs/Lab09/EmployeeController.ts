@@ -9,10 +9,10 @@ export default class EmployeeController {
 
     }
     getBestSalary(employeeList: Employee[]): Employee {
-        this.PrintEmployeeList(employeeList);
+
         let theBestEmployee = employeeList[0];
         employeeList.forEach(employee => {
-            if (theBestEmployee.getSalary() <employee.getSalary())
+            if (theBestEmployee.getSalary() < employee.getSalary())
                 theBestEmployee = employee;
 
         });
@@ -20,7 +20,7 @@ export default class EmployeeController {
 
     }
     getLowestsalary(employeeList: Employee[]): Employee {
-        this.PrintEmployeeList(employeeList);
+
         let lowestSalaryEmployee = employeeList[0];
         employeeList.forEach(employee => {
             if (lowestSalaryEmployee.getSalary() > employee.getSalary())
@@ -29,12 +29,26 @@ export default class EmployeeController {
         return lowestSalaryEmployee;
     }
     PrintEmployeeList(employeeList: Employee[]) {
-        console.log("----------------DS nhan vien ---------------");
+       // console.log("----------------DS nhan vien ---------------");
         employeeList.forEach(emp => {
             console.log(emp.getName() + " with salary:" + emp.getSalary());
 
         });
     }
+    SortbyASC(employeList: Employee[]): void {
+        employeList.sort((emp, emp2) => emp.getSalary() - emp2.getSalary());
+        console.log("Sắp xếp theo thự tự tăng dần ");
+        this.PrintEmployeeList(employeList);
+
+    }
+    SortbyDSC(employeList: Employee[]): void {
+        employeList.sort((emp, emp2) => emp2.getSalary() - emp.getSalary());
+        console.log("Sắp xếp theo thự tự giảm dần ");
+        this.PrintEmployeeList(employeList);
+
+    }
+
+
 
 
 }
