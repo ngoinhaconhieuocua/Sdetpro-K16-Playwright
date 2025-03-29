@@ -1,11 +1,14 @@
 import BankingAccount from "./BankingAccount";
 export default class CheckingAccount extends BankingAccount {
 
-    constructor(accountNumber: string, balance: number) {
-        super(accountNumber, balance);
+    constructor(accountNumber: string) {
+        super(accountNumber, 50);
 
     }
     deposit(amount: number): void {
+        if (amount < 0) {
+            console.log("So tien ban nap vao khong hop le!");
+        }
         this.balance = this.getBalance() + amount;
     }
     withdraw(amount: number): void {
